@@ -64,3 +64,12 @@ function rot13(str) {
 
 rot13("SERR PBQR PNZC");
 console.log(rot13("SERR PBQR PNZC"));
+
+        /another/
+function testRoutine(word){
+  return word.replace(/[A-Z]/g, function(c){
+    return String.fromCharCode(c.charCodeAt() + (/[A-M]/.test(c) ? 13: -13))
+  })
+}
+
+console.log(testRoutine("SERR YBIR?"))

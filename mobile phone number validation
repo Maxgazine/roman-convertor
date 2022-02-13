@@ -18,3 +18,18 @@ function telephoneCheck(str) {
    }
   return false;
 }
+
+function telephoneCheck(str) {
+  let havTenDigit = /\d{10}/;
+  let havElfDigit = /\d{11}/;
+  let startEin = /^1{1}/;
+  let charectorHave = /[0-9| |-|(|)]/;
+  let seperateThreeDigit = /(|([0-9]{3})|)*...|([0-9]{4})$/;
+  
+  let checkTen = havTenDigit.test(str);
+  let checkRle = havElfDigit.test(str);
+  if(checkTen === true){
+    if(seperateThreeDigit.test(checkTen) == true){true}
+    return false
+  }
+}

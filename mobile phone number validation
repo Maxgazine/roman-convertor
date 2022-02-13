@@ -1,0 +1,20 @@
+// first edition uncomplete //
+function telephoneCheck(str) {
+  if(str.match(/^[\d]/)){ 
+    let sliceNum = str.split(/\D/g).join("").length;
+    if(sliceNum == 10){
+      return "sdf" + " " + str.split(/\D/g).join("") + " " + str.split(" ").join("");
+    } else if(sliceNum == 11){
+      let incSpace = str.split(" ").join("");
+      if(incSpace[0] == 1){
+        return str.slice(/\d/);
+      }
+      else{false}
+    }
+    else {false}
+   }
+   else if(str[0] == "(" & str[4] == ")"){
+     return "sdf" + " " + str.split(/\D/g).join("");
+   }
+  return false;
+}
